@@ -1,0 +1,1 @@
+# About stk-arc42-c4-software-architecture-doc stack

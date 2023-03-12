@@ -1,7 +1,8 @@
 :selected-version: 1.25.0
 :icons: font
 
-= Software Architecture Documentation Example with arc42 and C4 Model
+= {{project_name}}
+==== Software Architecture Documentation Example with arc42 and C4 Model
 
 This example shows how to use https://arc42.org/[arc42] in combination with the https://c4model.com/[C4 model] with the Documentation as Code technique.
 
@@ -11,6 +12,7 @@ Check out the deployed https://bitsmuggler.github.io/arc42-c4-software-architect
 
 Technologies involved:
 
+* https://docs.stackspot.com/en/docs/stk-cli/installation/[StackSpot] Cli, generate template and plugin ADR 
 * https://arc42.org/[arc42] to get the structure for the software architecture documentation
 * https://c4model.com/[C4 Model] an "abstraction-first" approach to diagramming software architecture, based upon abstractions that reflect how software architects and developers think about and build software.
 * https://structurizr.com/dsl[Structurizr DSL] to describe the https://c4model.com/[C4 Model] of the software system
@@ -49,45 +51,18 @@ Generate the diagrams from the structurizr workspace model
 ./bin/structurizr-cli/structurizr.sh export -w bank.dsl -format plantuml/structurizr -output documentation/diagrams
 ----
 
-== Migrate markdown based ADRs from adr-tools to AsciiDoc
+== Migrate markdown based ADRs from StackSpot to AsciiDoc
 
-=== Install and configure adr-tools
-
-. Install https://github.com/npryce/adr-tools[adr-tools]
-. Configure the adr template with the following header config
+=== Use plugin to create new ADR file 
 
 [source, bash]
 ----
-adr config
+ stk apply plugin -p stk-adr-app-doc-plugin
 ----
 
-Replace the content of the `template.md` file with the following content:
+Files are generated in `documentation\adr`:
 
-[source, markdown]
-----
-### TITLE
-
-Date: DATE
-
-#### Status
-
-STATUS
-
-#### Context
-
-The issue motivating this decision, and any context that influences or constrains the decision.
-
-#### Decision
-
-The change that we're proposing or have agreed to implement.
-
-#### Consequences
-
-What becomes easier or more difficult to do and any risks introduced by the change that will need to be mitigated.
-----
-
-=== Migrate the generated markdown based decisions with the docker-asciidoctor image under Linux
-
+=== 
 [source, bash]
 ----
 for f in ./documentation/adrs/*.md; do docker run -it --rm -v $PWD:/documents asciidoctor/docker-asciidoctor kramdoc $f; done

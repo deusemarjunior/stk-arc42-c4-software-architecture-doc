@@ -1,0 +1,12 @@
+diagrams/
+bin/structurizr-cli/
+bin/structurizr-cli/
+documentation/images/diag-*.png
+*.cache
+*.pdf
+*.html
+.DS_Store
+.idea/
+.gradle/
+build/
+documentation/adrs/*.adoc

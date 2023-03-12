@@ -1,0 +1,10 @@
+name: default-template
+description: Build a Structure Software Architecture Documentation with arc42 and the C4 model
+types:
+  - app-template
+inputs:
+  - label: Project Name
+    type: text
+    name: project_name
+    required: true
+    default: project-name

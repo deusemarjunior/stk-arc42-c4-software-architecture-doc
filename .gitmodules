@@ -1,0 +1,3 @@
+[submodule "stk-adr-app-doc-plugin"]
+	path = stk-adr-app-doc-plugin
+	url = https://github.com/deusemarjunior/stk-adr-app-doc-plugin.git
