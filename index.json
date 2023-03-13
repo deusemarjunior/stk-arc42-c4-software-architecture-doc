@@ -3,6 +3,23 @@
   "stack_type": "local",
   "stack_path": "/Users/deusemarjunior/proj/stk-arc42-c4-software-architecture-doc",
   "stack_remote": [],
-  "plugins": {},
+  "plugins": {
+    "default-template": {
+      "description": "Build a Structure Software Architecture Documentation with arc42 and the C4 model",
+      "types": [
+        "app-template"
+      ],
+      "path": "/Users/deusemarjunior/.stk/stacks/stk-arc42-c4-software-architecture-doc/default-template",
+      "latest_version": "No release"
+    },
+    "stk-adr-app-doc-plugin": {
+      "description": "Create a new file Architectural Decision Record - ADR",
+      "types": [
+        "app"
+      ],
+      "path": "/Users/deusemarjunior/.stk/stacks/stk-arc42-c4-software-architecture-doc/stk-adr-app-doc-plugin",
+      "latest_version": "No release"
+    }
+  },
   "tasks": {}
 }

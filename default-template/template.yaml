@@ -10,4 +10,4 @@ inputs:
     default: project-name
 
 global-computed-inputs:
-  github-hidden-folder: ".github"
+  gh_hidden_folder: ".github"
